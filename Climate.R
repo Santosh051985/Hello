@@ -1,5 +1,5 @@
 setwd("C:/Users/HP/Desktop")
-claimants <- read.csv(file.choose())# Choose the claimants Data set
+claimants <- read.csv(file.choose())            # Choose the claimants Data set
 View(claimants)
 
 claimants <- na.omit(claimants)
@@ -17,10 +17,10 @@ confusion# Model Accuracy
 Accuracy<-sum(diag(confusion)/sum(confusion))
 Accuracy # 70.62
 
-##
 pred_values <- NULL
 yes_no <- NULL
-for (i in 1:1096){
+for (i in 1:1096)
+{
   pred_values[i] <- ifelse(prob[i]>=0.5,1,0)
   yes_no[i] <- ifelse(prob[i]>=0.5,"yes","no")
 }
@@ -46,6 +46,3 @@ plot(rocrperf,colorize=T,text.adj=c(-0.2,1.7))
 #install.packages("epiR")
 #library(epiR)
 #epi.2by2(confusion, method="cohort.count")
-380/505
-198/591
-
