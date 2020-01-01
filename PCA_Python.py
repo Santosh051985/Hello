@@ -4,21 +4,18 @@ from sklearn.decomposition import PCA
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error  
 
-# read the train and test dataset
+# read the train and test dataset from csv file
 train_data = pd.read_csv('train.csv')
 test_data = pd.read_csv('test.csv')
 
-# view the top 3 rows of the dataset
-print(train_data.head(3))
+# view the top 10 rows of the dataset
+print(train_data.head(10))
 
 # shape of the dataset
 print('\nShape of training data :',train_data.shape)
 print('\nShape of testing data :',test_data.shape)
 
-# Now, we need to predict the missing target variable in the test data
-# target variable - Survived
-
-# seperate the independent and target variable on training data
+#seperate the independent and target variable on training data
 # target variable - Item_Outlet_Sales
 train_x = train_data.drop(columns=['Item_Outlet_Sales'],axis=1)
 train_y = train_data['Item_Outlet_Sales']
@@ -49,13 +46,7 @@ print('\nRMSE on test dataset : ', rmse_test)
 
 # create the object of the PCA (Principal Component Analysis) model
 # reduce the dimensions of the data to 12
-'''
-You can also add other parameters and test your code here
-Some parameters are : svd_solver, iterated_power
-Documentation of sklearn PCA:
 
-https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
-'''
 model_pca = PCA(n_components=12)
 
 new_train = model_pca.fit_transform(train_x)
