@@ -8,7 +8,7 @@ normalized_data <- scale(mydata) #excluding the university name columnbefore nor
 d <- dist(normalized_data, method = "euclidean") # distance matrix
 fit <- hclust(d, method="complete")
 fit
-?hclust
+?hclust # Display info of H Cluster
 plot(fit) # display dendrogram
 plot(fit, hang=-1)
 groups <- cutree(fit, k=3)# cut tree into 3 clusters
