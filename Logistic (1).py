@@ -93,21 +93,18 @@ pd.crosstab(y_pred,Y)
 # Loading data which contains categorical data to demonstrate how to 
 # create dummy columns 
 
-salary = pd.read_csv("E:\\bokey\\Excelr Data\\Python Codes\\all_py\\Logistic Regression\\sal.csv")
+salary = pd.read_csv("C:\\Users\|HP\\Desktop\\sal.csv")
 
 # creating dummy columns for the categorical columns 
 salary.columns
 sal_dummies = pd.get_dummies(salary[["workclass","occupation","education","maritalstatus","relationship","race","sex","native"]])
 # Dropping the columns for which we have created dummies
 salary.drop(["workclass","education","maritalstatus","occupation","relationship","race","sex","native"],inplace=True,axis = 1)
-
 # adding the columns to the salary data frame 
 
 salary = pd.concat([salary,sal_dummies],axis=1)
 
 salary["cat"] = 0
-
-
 salary.loc[salary.Salary==" <=50K","cat"] = 1
 salary.Salary.value_counts()
 salary.cat.value_counts()
