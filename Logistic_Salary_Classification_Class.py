@@ -10,7 +10,6 @@ from sklearn import preprocessing
 from sklearn.metrics import classification_report
 
 # loading claimants data 
-
 claimants = pd.read_csv("C:\\Users\\HP\\Desktop\\claimants.csv")
 
 claimants.head(10)
