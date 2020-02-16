@@ -45,10 +45,7 @@ sb.boxplot(x="CLMINSUR",y="LOSS",data=claimants,palette="hls")
 # To get the count of null values in the data 
 
 claimants.isnull().sum()
-
-
 claimants.shape # 1340 6 => Before dropping null values
-
 # To drop null values ( dropping rows)
 
 claimants.dropna().shape # 1096 6 => After dropping null values
@@ -92,7 +89,7 @@ pd.crosstab(y_pred,Y)
 # Loading data which contains categorical data to demonstrate how to 
 # create dummy columns 
 
-salary = pd.read_csv("C:\\Users\|HP\\Desktop\\sal.csv")
+salary = pd.read_csv("C:\\Users\\HP\\Desktop\\sal.csv")
 
 # creating dummy columns for the categorical columns 
 salary.columns
