@@ -4,7 +4,7 @@ mydata <- input[,(2:7)]
 # Load data as mydata
 View(mydata)
 
-normalized_data <- scale(mydata) #excluding the university name columnbefore normalizing
+normalized_data <- scale(mydata) #excluding the university name column before normalizing the data
 d <- dist(normalized_data, method = "euclidean") # distance matrix
 fit <- hclust(d, method="complete")
 fit
