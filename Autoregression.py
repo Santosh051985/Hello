@@ -1,5 +1,6 @@
-# Library statsmodels, random
+# import required Library statsmodels for statistical Model
 from statsmodels.tsa.ar_model import AR
+# import Random for random values
 from random import random
 # contrived dataset
 data = [x + random() for x in range(1, 100)]
