@@ -1,3 +1,4 @@
+# Library statsmodels, random
 from statsmodels.tsa.ar_model import AR
 from random import random
 # contrived dataset
