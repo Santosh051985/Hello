@@ -1,4 +1,4 @@
-# importing required libraries
+# importing Pandas libraries for manipulation of data
 import pandas as pd
 from sklearn.decomposition import PCA
 from sklearn.linear_model import LinearRegression
