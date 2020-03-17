@@ -1,3 +1,4 @@
+# To set working directory
 setwd("C:/Users/HP/Desktop")
 claimants <- read.csv(file.choose())            # Choose the claimants Data set
 View(claimants)
