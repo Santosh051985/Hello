@@ -3,7 +3,7 @@ input <- read.csv("Universities_Clustering.csv")
 # Display Dataset
 View(input)
 mydata <- input[,(2:7)]
-# Load data as mydata
+# Load data as mydata variable
 View(mydata)
 
 normalized_data <- scale(mydata) #excluding the university name column before normalizing the data
