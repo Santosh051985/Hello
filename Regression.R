@@ -9,7 +9,7 @@ install.packages("lattice")
 library("lattice")
 ?lattice
 
-# Exploratory data analysis
+# Exploratory data analysis ################
 summary(wc.at)
 #aggregate(wc.at)
 
